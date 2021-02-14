@@ -8,7 +8,23 @@
   <title>Document</title>
 </head>
 <body>
-Hello World
 <!--Echo HTML tags-->
+<?php
+echo "Hello lilian";
+?>
+
+
+<?php
+  echo '<button>';
+?>
+
+<?php
+  echo '<br>';
+?>
+
+<?php
+print "i love you";
+?>
+
 </body>
 </html>
