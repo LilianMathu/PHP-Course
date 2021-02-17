@@ -1,7 +1,7 @@
 <?php
 
 // What is a variable
-    //It is a container that stores value.";
+//It is a container that stores value.";
 
 // Variable types
 /*
@@ -25,21 +25,21 @@ $salary = null;
 
 
 // Print the variables. Explain what is concatenation
-        //concatenation is the joining of variables
-echo $name.'<br>';
-echo $age.'<br>';
-echo $isMale.'<br>';
-echo $salary.'<br><br><br>';
+//concatenation is the joining of variables
+echo $name . '<br>';
+echo $age . '<br>';
+echo $isMale . '<br>';
+echo $salary . '<br><br><br>';
 
 
 
 // Print types of the variables
-    #Use the gettype() variable
-    echo gettype($name).'<br>';
-    echo gettype($age).'<br>';
-    echo gettype($isMale).'<br>';
-    echo gettype($height).'<br>';
-    echo gettype($salary).'<br><br><br>';
+#Use the gettype() variable
+echo gettype($name) . '<br>';
+echo gettype($age) . '<br>';
+echo gettype($isMale) . '<br>';
+echo gettype($height) . '<br>';
+echo gettype($salary) . '<br><br><br>';
 
 
 
@@ -51,22 +51,34 @@ echo $salary.'<br><br><br>';
     -length (for some variable types)
     -the variable itself
 */
-    echo var_dump($name, $age, $isMale, $height, $salary);
+echo var_dump($name, $age, $isMale, $height, $salary);
 
 
 
 // Change the value of the variable
-    $name = false;
+$name = false;
 // Print type of the variable
-    echo var_dump($name);
+echo var_dump($name);
 
 
 
-    
-// Variable checking functions
 
-// Check if variable is defined
+// Variable checking functions prints one for true and nothing (zero) for false
+    echo   is_string($name) . "<br>";  
+    echo   is_integer($age) . "<br>";
+    echo   is_bool($isMale) . "<br>";
+    echo  is_float($height) . "<br>";
 
-// Constants
 
+// Check if variable is defined or not. Evaluates to true or false
+    echo isset($name). "<br>";
+
+
+
+// Constants. Created with the define(name, value) functions which take two parameters, the constant name, and value
+    define('PI', 3.14);
+
+    echo PI. "<br>";
 // Using PHP built-in constants
+ echo SORT_ASC. "<br>";     //sort ascending
+ echo PHP_INT_MAX. "<br>";  //prints max integer 
