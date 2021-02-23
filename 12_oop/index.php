@@ -38,8 +38,6 @@ echo $p1->name ."<br>";
 echo $p1->age . "<br>";
 
 
-
-
 $p2 = new People();
 
 $p2->name = "Lily";
@@ -48,8 +46,74 @@ $p2->age = "121";
 echo $p2->name ."<br>";
 echo $p2->age ."<br>";
 
-// Using setter and getter
 
+
+// Using setter and getter
+   /*
+   These are used to set and get value for private properties
+   
+   */
+
+class Animals {
+   public $kingdom;
+   public $age;
+   private $location;
+
+   public function __construct($kingdom, $age)
+   {
+      $this->kingdom = $kingdom;
+      $this->age = $age;
+   }
+
+   public function setLocation($location)
+   {
+      $this->location = $location;
+   }
+
+   public function getLocation()
+   {
+      return $this->location;
+   }
+}
+
+$bufallo = new Animals("animalia", "32");
+$bufallo->setLocation("Tsavo East");
+   echo "<pre>";
+   var_dump($bufallo);
+   echo"</pre>"; 
+
+   echo $bufallo->getLocation();
+
+
+   
+// PHP Constructor
+   /*
+   If you create a __construct() function, PHP will automatically call this function when you create an
+    object from a class.
+   We see in the example below, that using a constructor saves us from calling the set_name() method 
+   which reduces the amount of code.
+
+   */
+
+
+   class Fruits {
+      public $color;
+      public $size;
+
+      public function __construct($color, $size)
+      {
+         $this->color = $color;
+         $this->size = $size;
+      }
+
+   }
+
+   $apple = new Fruits("green", "20");
+   $banana = new Fruits("yellow", "30");
+
+   echo "<pre>";
+   var_dump($banana);
+   echo"</pre>"; 
 
 
 ?>
