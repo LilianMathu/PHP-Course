@@ -152,10 +152,11 @@ $bufallo->setLocation("Tsavo East");
    $toyota->setYear(2010);
    $mazda->setYear(2015);
    
-   echo Vehicles::$counter;
+   echo "<pre>";
+   echo var_dump($toyota);
+   echo "</pre>";
+
+   echo Vehicles::getCounter();
 
 
-      echo "<pre>";
-      echo var_dump($toyota);
-      echo "</pre>";
 ?>
