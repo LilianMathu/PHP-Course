@@ -5,7 +5,14 @@
     A class is defined by using the class keyword, followed by the name of the class and a 
     pair of curly braces ({}). All its properties(variables) and methods(functions) go inside the braces.
    */
+
+   //USING INHERITANCE 
+
 require_once "Person.php";
+
+require_once "Student.php";
+
+$student = new Student("Lilian", 30, 147638);
 
 
 // Create Person class in Person.php
@@ -54,109 +61,110 @@ require_once "Person.php";
    
    */
 
-class Animals {
-   public $kingdom;
-   public  $age;
-   private $location;
+// class Animals {
+//    public $kingdom;
+//    public  $age;
+//    private $location;
 
-   public function __construct($kingdom, $age)
-   {
-      $this->kingdom = $kingdom;
-      $this->age = $age;
-   }
+//    public function __construct($kingdom, $age)
+//    {
+//       $this->kingdom = $kingdom;
+//       $this->age = $age;
+//    }
 
-   public function setLocation($location)
-   {
-      $this->location = $location;
-   }
+//    public function setLocation($location)
+//    {
+//       $this->location = $location;
+//    }
 
-   public function getLocation()
-   {
-      return $this->location;
-   }
-}
+//    public function getLocation()
+//    {
+//       return $this->location;
+//    }
+// }
 
-$bufallo = new Animals("animalia", 32);
-$bufallo->setLocation("Tsavo East");
-   echo "<pre>";
-   var_dump($bufallo);
-   echo"</pre>"; 
+// $bufallo = new Animals("animalia", 32);
+// $bufallo->setLocation("Tsavo East");
+//    echo "<pre>";
+//    var_dump($bufallo);
+//    echo"</pre>"; 
 
-   echo $bufallo->getLocation();
-
-
-
-// PHP Constructor
-   /*
-   If you create a __construct() function, PHP will automatically call this function when you create an
-    object from a class.
-   We see in the example below, that using a constructor saves us from calling the set_name() method 
-   which reduces the amount of code.
-
-   */
+//    echo $bufallo->getLocation();
 
 
-   class Fruits {
-      public $color;
-      public $size;
 
-      public function __construct($color, $size)
-      {
-         $this->color = $color;
-         $this->size = $size;
-      }
+// // PHP Constructor
+//    /*
+//    If you create a __construct() function, PHP will automatically call this function when you create an
+//     object from a class.
+//    We see in the example below, that using a constructor saves us from calling the set_name() method 
+//    which reduces the amount of code.
 
-   }
+//    */
 
-   $apple = new Fruits("green", "20");
-   $banana = new Fruits("yellow", "30");
 
-   echo "<pre>";
-   var_dump($banana);
-   echo"</pre>"; 
+//    class Fruits {
+//       public $color;
+//       public $size;
 
-   //static properties and methods
-   class Vehicles {
-      public $make;
-      public $model;
-      private $year;
-      public static $counter = 0;
+//       public function __construct($color, $size)
+//       {
+//          $this->color = $color;
+//          $this->size = $size;
+//       }
 
-      public function __construct ($make, $model)
-      {
-         $this->make = $make;
-         $this->model = $model;
-         self::$counter++;
-      }
+//    }
 
-      public function setYear($year)
-      {
-         $this->year = $year;
-      }
+//    $apple = new Fruits("green", "20");
+//    $banana = new Fruits("yellow", "30");
 
-      public function getYear()
-      {
-         return $this->year;
-      }
+//    echo "<pre>";
+//    var_dump($banana);
+//    echo"</pre>"; 
 
-      public static function getCounter()
-      {
-         return self::$counter;
-      }
+//    //static properties and methods
+//    class Vehicles {
+//       public $make;
+//       public $model;
+//       private $year;
+//       public static $counter = 0;
 
-   }
+//       public function __construct ($make, $model)
+//       {
+//          $this->make = $make;
+//          $this->model = $model;
+//          self::$counter++;
+//       }
 
-   $toyota = new Vehicles("Toyota", "Vitz");
-   $mazda = new Vehicles("Mazda", "Demio");
+//       public function setYear($year)
+//       {
+//          $this->year = $year;
+//       }
 
-   $toyota->setYear(2010);
-   $mazda->setYear(2015);
+//       public function getYear()
+//       {
+//          return $this->year;
+//       }
+
+//       public static function getCounter()
+//       {
+//          return self::$counter;
+//       }
+
+//    }
+
+//    $toyota = new Vehicles("Toyota", "Vitz");
+//    $mazda = new Vehicles("Mazda", "Demio");
+
+//    $toyota->setYear(2010);
+//    $mazda->setYear(2015);
    
-   echo "<pre>";
-   echo var_dump($toyota);
-   echo "</pre>";
+//    echo "<pre>";
+//    echo var_dump($toyota);
+//    echo "</pre>";
 
-   echo Vehicles::getCounter();
+//    echo Vehicles::getCounter();
 
 
+// 
 ?>

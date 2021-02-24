@@ -2,13 +2,14 @@
     class Person {
         public $name;
         public $age;
-        private $salary;
+        protected $salary;
         public static $counter = 0;
 
         public function __construct($name, $age)
         {
             $this->name = $name;
             $this->age = $age;
+            $this->salary = 100;
             self::$counter++;
         }
 
@@ -30,7 +31,7 @@
     }
 
     $architect = new Person("Timothy", "26");
-    $architect->setSalary(100000);
+        $architect->setSalary(100000);
 
     echo "<pre>";
     var_dump($architect);
