@@ -5,46 +5,46 @@
     A class is defined by using the class keyword, followed by the name of the class and a 
     pair of curly braces ({}). All its properties(variables) and methods(functions) go inside the braces.
    */
-
+require_once "Person.php";
 
 
 // Create Person class in Person.php
 
-class People {
-    public $name;
-    public $age;
-    private $salary;
+// class People {
+//     public $name;
+//     public $age;
+//     private $salary;
 
-   }
+//    }
 
-$p = new People();
-   echo "<pre>";
-   var_dump($p);
-   echo "</pre>";
+// $p = new People();
+//    echo "<pre>";
+//    var_dump($p);
+//    echo "</pre>";
 
 
 
 // Create instance of Person
-$p1 = new People();
+// $p1 = new People();
 
-$p1->name = "Lilian";
-$p1->age = "123";
+// $p1->name = "Lilian";
+// $p1->age = "123";
 
-echo "<pre>";
-var_dump($p1);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($p1);
+// echo "</pre>";
 
-echo $p1->name ."<br>";
-echo $p1->age . "<br>";
+// echo $p1->name ."<br>";
+// echo $p1->age . "<br>";
 
 
-$p2 = new People();
+// $p2 = new People();
 
-$p2->name = "Lily";
-$p2->age = "121";
+// $p2->name = "Lily";
+// $p2->age = "121";
 
-echo $p2->name ."<br>";
-echo $p2->age ."<br>";
+// echo $p2->name ."<br>";
+// echo $p2->age ."<br>";
 
 
 
@@ -56,7 +56,7 @@ echo $p2->age ."<br>";
 
 class Animals {
    public $kingdom;
-   public $age;
+   public  $age;
    private $location;
 
    public function __construct($kingdom, $age)
@@ -76,7 +76,7 @@ class Animals {
    }
 }
 
-$bufallo = new Animals("animalia", "32");
+$bufallo = new Animals("animalia", 32);
 $bufallo->setLocation("Tsavo East");
    echo "<pre>";
    var_dump($bufallo);
