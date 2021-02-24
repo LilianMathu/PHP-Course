@@ -85,7 +85,7 @@ $bufallo->setLocation("Tsavo East");
    echo $bufallo->getLocation();
 
 
-   
+
 // PHP Constructor
    /*
    If you create a __construct() function, PHP will automatically call this function when you create an
@@ -115,5 +115,47 @@ $bufallo->setLocation("Tsavo East");
    var_dump($banana);
    echo"</pre>"; 
 
+   //static properties and methods
+   class Vehicles {
+      public $make;
+      public $model;
+      private $year;
+      public static $counter = 0;
 
+      public function __construct ($make, $model)
+      {
+         $this->make = $make;
+         $this->model = $model;
+         self::$counter++;
+      }
+
+      public function setYear($year)
+      {
+         $this->year = $year;
+      }
+
+      public function getYear()
+      {
+         return $this->year;
+      }
+
+      public static function getCounter()
+      {
+         return self::$counter;
+      }
+
+   }
+
+   $toyota = new Vehicles("Toyota", "Vitz");
+   $mazda = new Vehicles("Mazda", "Demio");
+
+   $toyota->setYear(2010);
+   $mazda->setYear(2015);
+   
+   echo Vehicles::$counter;
+
+
+      echo "<pre>";
+      echo var_dump($toyota);
+      echo "</pre>";
 ?>
