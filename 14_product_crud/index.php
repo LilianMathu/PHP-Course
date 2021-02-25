@@ -65,7 +65,7 @@ Iterate the elements and display them in the table
         <tbody>
 
             <?php
-            foreach ($products as $product) {  ?>
+            foreach ($products as $product) :  ?>
 
             <tr>
                 <th scope="row">1</th>
@@ -74,7 +74,7 @@ Iterate the elements and display them in the table
                 <td>@mdo</td>
             </tr>
 
-            <?php }   ?>
+            <?php endforeach;   ?>
 
         </tbody>
     </table>
