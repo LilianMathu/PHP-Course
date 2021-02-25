@@ -10,7 +10,7 @@
 
 */
 $pdo = new PDO('mysql:host=localhost; port=3306; dbname=products', 'root', '');
-$pdo ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 /*
 SELECT statements in the database. 
@@ -20,14 +20,13 @@ Call execute on the statement, which will make the query on the database.
 
 
 */
-$statement = $pdo ->prepare('SELECT * FROM products ORDER BY create_date DESC');
-$statement -> execute();
+$statement = $pdo->prepare('SELECT * FROM products ORDER BY create_date DESC');
+$statement->execute();
 $products = $statement->fetchAll(PDO::FETCH_ASSOC);          //records in this table will be fetched as associative arrays.
 
-    echo "<pre>";
-    var_dump($products);
-    echo "</pre>";
-
+/*
+Iterate the elements and display them in the table
+*/
 
 ?>
 
@@ -52,35 +51,33 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);          //records in this t
 
 
     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Create_Date</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+            foreach ($products as $product) {  ?>
+
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+
+            <?php }   ?>
+
+        </tbody>
+    </table>
 
 
 </body>
