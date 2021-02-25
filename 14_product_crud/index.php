@@ -1,4 +1,5 @@
 <?php
+//Database setup
 
 //For the database, use PDO  (PHP Data Objects).
 /*Start by creating an instance of the PDO class. and pass the following arguments.
@@ -10,6 +11,23 @@
 */
 $pdo = new PDO('mysql:host=localhost; port=3306; dbname=products', 'root', '');
 $pdo ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+/*
+SELECT statements in the database. 
+You can use exec() statements, but is recommended to use prepare statements with SELECT query
+the prepare method returns a statement which is an instance of $pdo statement.
+Call execute on the statement, which will make the query on the database.
+
+
+*/
+$statement = $pdo ->prepare('SELECT * FROM products ORDER BY create_date DESC');
+$statement -> execute();
+$products = $statement->fetchAll(PDO::FETCH_ASSOC);          //records in this table will be fetched as associative arrays.
+
+    echo "<pre>";
+    var_dump($products);
+    echo "</pre>";
+
 
 ?>
 
