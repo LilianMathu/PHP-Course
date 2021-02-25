@@ -1,8 +1,17 @@
+<?php
 
+//For the database, use PDO  (PHP Data Objects).
+/*Start by creating an instance of the PDO class. and pass the following arguments.
+    1. dsn:string ->connection string (host, port, database name)
+    2. user
+    3. Password
+->Also specify what happens if the connection was not successful
 
+*/
+$pdo = new PDO('mysql:host=localhost; port=3306; dbname=products', 'root', '');
+$pdo ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-
+?>
 
 <!doctype html>
 <html lang="en">
