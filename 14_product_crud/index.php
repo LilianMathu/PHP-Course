@@ -69,7 +69,7 @@ Iterate the elements and display them in the table
 
             <tr>
                 <th scope="row"><?php echo $i + 1  //because the iterations start with zero, and you don't want the table to start with a zero ?></th>
-                <!-- <td></td> -->
+                <td></td>
                 <td><?php echo $product['title'] ?></td>
                 <td><?php echo $product['price'] ?></td>
                 <td><?php echo $product['create_date'] ?></td>
