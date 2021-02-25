@@ -65,13 +65,19 @@ Iterate the elements and display them in the table
         <tbody>
 
             <?php
-            foreach ($products as $product) :  ?>
+            foreach ($products as $i => $product) :  ?>
 
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row"><?php echo $i + 1  //because the iterations start with zero, and you don't want the table to start with a zero ?></th>
+                <td></td>
+                <td><?php $product['title'] ?></td>
+                <td><?php $product['price'] ?></td>
+                <td><?php $product['create_date'] ?></td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary">Edit</button>
+                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                </td>
+
             </tr>
 
             <?php endforeach;   ?>
