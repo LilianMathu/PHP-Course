@@ -48,7 +48,7 @@ They are variables. In the naming, they start with an underscore
 -
 */
 echo '<pre>';
-var_dump($_GET);
+var_dump($_POST);
 echo '</pre>';
 
 
@@ -74,7 +74,7 @@ echo '</pre>';
     <h1>Create a Product</h1>
     <!-- The action attribute specifies where the form should be submitted -->
 
-    <form action="create.php" method="get">       
+    <form action="create.php" method="post">       
         <div class="form-group">
             <label>Product image</label> <br>
             <input type="file" name="image" >
