@@ -49,6 +49,9 @@ Iterate the elements and display them in the table
 <body>
     <h1>Products CRUD</h1>
 
+    <p>
+        <a href="create.php" class="btn btn-success" >Create Product</a>
+    </p>
 
     <table class="table">
         <thead>
@@ -74,8 +77,8 @@ Iterate the elements and display them in the table
                 <td><?php echo $product['price'] ?></td>
                 <td><?php echo $product['create_date'] ?></td>
                 <td>
-                    <button type="button" class="btn btn-outline-primary">Edit</button>
-                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
+                    <button type="button" class="btn btn-sm  btn-outline-danger">Delete</button>
                 </td>
 
             </tr>
