@@ -47,11 +47,17 @@ They are variables. In the naming, they start with an underscore
 2. $_POST
 -
 */
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
 
+$title = $_POST['title'];
+$description = $_POST['description'];
+$price = $_POST['price'];
+$date = date('Y-M-D h:i:s');
 
+//insert to the database must be strings. which is why the values are in strings Price can be exempted because it is an INT
+
+$pdo-> exec("INSERT INTO products (title, description, image, price, create_date)
+                VALUE('$title','$description', '', $price, '$date' )  
+        ");
 ?>
 
 <!doctype html>
